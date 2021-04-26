@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <div class="board">
+  </div>
+
+  <div class="create-player-1">
+    <form action="" method="get">
+      <label for="name">Enter your name</label>
+      <input id="name" type="text" name="name" />
+      <fieldset class="marker-selector">
+        <legend>Choose X or Y</legend>
+        <label for="x">X
+          <input type="radio" id="x" name="marker" checked/>
+        </label>
+        <label for="y">Y
+          <input type="radio" id="y" name="marker" />
+        </label>
+      </fieldset>
+      <button class="ok">OK</button>
+    </form>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>

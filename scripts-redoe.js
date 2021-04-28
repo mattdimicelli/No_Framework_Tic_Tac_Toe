@@ -15,6 +15,7 @@ const playerSetup = (() => {
     createPlayers();
     displayController.displayNames(players);
     displayController.displayBoard();
+    displayController.closePreGameSetup();
   });
 
   return { players };
@@ -44,7 +45,7 @@ const gamePlay = (() => {
   };
 
   const play = (e) => {
-    const index = e.target.classList[0];
+    const index = e.target.classList[1];
     if (gameBoard.board[index] === "") {
       updateMarker();
       gameBoard.board[index] = marker;
@@ -135,10 +136,15 @@ const displayController = (() => {
     p2Name.textContent = players[1].name;
   };
 
+  const closePreGameSetup = () => {
+    const setupDiv = document.querySelector("div.pre-game-setup");
+    setupDiv.classList.add("close");
+  };
+
   const displayBoard = () => {
     let html = "";
     for (let i = 0; i < gameBoard.board.length; i++) {
-      html += `<div class="${i}">${gameBoard.board[i]}</div>`;
+      html += `<div class="cell${i} ${i}">${gameBoard.board[i]}</div>`;
     }
     boardDiv.innerHTML = html;
     displayCurrentPlayer();
@@ -164,7 +170,13 @@ const displayController = (() => {
     messageBox.textContent = message;
   };
 
-  return { displayNames, displayBoard, displayScores, updateMessage };
+  return {
+    displayNames,
+    displayBoard,
+    displayScores,
+    updateMessage,
+    closePreGameSetup,
+  };
 })();
 
 const makePlayer = (nameInputEl) => {

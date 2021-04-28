@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  font-weight: bold;
 }
 
 body {
@@ -13,32 +14,69 @@ body {
   font-family: "dj_grossnormal", Arial, Helvetica, sans-serif;
 }
 
-.board {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 400px;
-}
-
-.board > div {
-  background-color: green;
-  width: 32%;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+div.main-screen,
 .pre-game-setup {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: yellow;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background-image: url("asphalt.jpg");
+  color: #eee3ff;
+}
+
+div.main-screen {
+  justify-content: space-between;
+}
+
+button {
+  color: #eee3ff;
+  font-family: "dj_grossnormal", Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border-style: solid;
+  border-color: #eee3ff;
+  font-weight: bold;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 390px;
+  width: 100%;
+  max-width: 530px;
+}
+
+div.board-score-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score-p1,
+.score-p2 {
+  font-size: 3rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.board > div {
+  background-color: transparent;
+  width: 33%;
+  border: 3px solid #0089ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  height: 130px;
+}
+
+.pre-game-setup {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .pre-game-setup h1 {
@@ -47,17 +85,123 @@ body {
   margin-bottom: 4rem;
 }
 
+.main-screen h1 {
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
 form.name-form label {
   display: block;
   font-size: 2rem;
 }
 
+.players-names-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
 form.name-form input {
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-family: "dj_grossnormal", Arial, Helvetica, sans-serif;
+  border: 0;
+  background-color: transparent;
+  color: #eee3ff;
+}
+
+form.name-form input::-webkit-input-placeholder,
+form.name-form input::-moz-placeholder,
+form.name-form input:-ms-input-placeholder,
+form.name-form input:-moz-placeholder,
+form.name-form input::-ms-input-placeholder,
+form.name-form input::placeholder {
+  color: red;
+}
+
+.play-again-and-message-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+button.play-again {
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+
+div.message {
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 .start-game-btn {
   display: block;
   width: 100%;
+}
+
+button.start-game-btn {
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+
+.close {
+  display: none;
+}
+
+.p1-name-screen-label,
+.p2-name-screen-label {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.p1-name-actual-name,
+.p2-name-actual-name {
+  display: block;
+  font-size: 2.5rem;
+}
+
+.p1-name,
+.p2-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+div.cell0 {
+  border-left: 0;
+  border-top: 0;
+}
+
+div.cell1 {
+  border-top: 0;
+}
+
+div.cell2 {
+  border-top: 0;
+  border-right: 0;
+}
+
+div.cell3 {
+  border-left: 0;
+}
+
+div.cell5 {
+  border-right: 0;
+}
+
+div.cell6 {
+  border-left: 0;
+  border-bottom: 0;
+}
+
+div.cell7 {
+  border-bottom: 0;
+}
+
+div.cell8 {
+  border-right: 0;
+  border-bottom: 0;
 }

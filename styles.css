@@ -23,7 +23,7 @@ div.main-screen,
   align-items: center;
   justify-content: flex-start;
   background-image: url("asphalt.jpg");
-  color: #eee3ff;
+  color: white;
 }
 
 div.main-screen {
@@ -31,11 +31,11 @@ div.main-screen {
 }
 
 button {
-  color: #eee3ff;
+  color: white;
   font-family: "dj_grossnormal", Arial, Helvetica, sans-serif;
   background-color: transparent;
   border-style: solid;
-  border-color: #eee3ff;
+  border-color: white;
   font-weight: bold;
 }
 
@@ -107,7 +107,7 @@ form.name-form input {
   font-family: "dj_grossnormal", Arial, Helvetica, sans-serif;
   border: 0;
   background-color: transparent;
-  color: #eee3ff;
+  color: white;
 }
 
 form.name-form input::-webkit-input-placeholder,
@@ -127,13 +127,14 @@ form.name-form input::placeholder {
 
 button.play-again {
   margin-bottom: 2rem;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin-left: 1rem;
   padding: 0.5rem;
+  width: 50%;
 }
 
 div.message {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   text-align: center;
 }
 
@@ -154,7 +155,7 @@ button.start-game-btn {
 .p1-name-screen-label,
 .p2-name-screen-label {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .p1-name-actual-name,

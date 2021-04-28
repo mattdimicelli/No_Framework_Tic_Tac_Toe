@@ -74,11 +74,11 @@ const gamePlay = (() => {
 
     possibleWins.forEach((combination) => {
       if (combination.every((index) => xIndices.includes(index))) {
-        win("X");
+        win("X", combination);
         return;
       }
       if (combination.every((index) => OIndices.includes(index))) {
-        win("O");
+        win("O", combination);
         return;
       }
     });
@@ -91,7 +91,7 @@ const gamePlay = (() => {
     displayController.updateMessage("Tie game!");
   };
 
-  const win = (marker) => {
+  const win = (marker, combination) => {
     const nameOfWinner =
       marker === "X"
         ? playerSetup.players[0].name
@@ -101,6 +101,7 @@ const gamePlay = (() => {
     boardActive = false;
     displayController.displayScores();
     displayController.updateMessage(`${nameOfWinner} wins this round!`);
+    displayController.strikeThru(combination);
   };
 
   return { getIsItP1sTurn };
@@ -141,6 +142,26 @@ const displayController = (() => {
     setupDiv.classList.add("close");
   };
 
+  const strikeThru = (combination) => {
+    boardDiv.innerHTML += '<canvas class="canvas"></canvas>';
+    const canvas = document.querySelector("canvas.canvas");
+    const ctx = canvas.getContext("2d");
+    ctx.strokeStyle = "white";
+    ctx.beginPath();
+    ctx.lineJoin = "round";
+    ctx.lineCap = "round";
+    ctx.lineWidth = 4;
+    console.log(combination);
+    switch (combination.join("")) {
+      case "036":
+        console.log("boom");
+        ctx.moveTo(50, 0);
+        ctx.lineTo(50, 370);
+        break;
+    }
+    ctx.stroke();
+  };
+
   const displayBoard = () => {
     let html = "";
     for (let i = 0; i < gameBoard.board.length; i++) {
@@ -176,6 +197,7 @@ const displayController = (() => {
     displayScores,
     updateMessage,
     closePreGameSetup,
+    strikeThru,
   };
 })();
 

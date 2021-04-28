@@ -45,6 +45,7 @@ button {
   min-height: 390px;
   width: 100%;
   max-width: 530px;
+  position: relative;
 }
 
 div.board-score-container {
@@ -205,4 +206,12 @@ div.cell7 {
 div.cell8 {
   border-right: 0;
   border-bottom: 0;
+}
+
+canvas.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 390px;
+  width: 100%;
 }

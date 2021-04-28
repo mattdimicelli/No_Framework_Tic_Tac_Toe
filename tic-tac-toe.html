@@ -12,25 +12,47 @@
 </head>
 
 <body>
-  <div class="board">
+
+  <div class="main-screen">
+    <h1>Tic Tac Toe</h1>
+
+    <div class="players-names-bar">
+      <div class="p1-name">
+        <span class="p1-name-screen-label">Player One:</span>
+        <span class="p1-name-actual-name"></span>
+      </div>
+      <div class="p2-name">
+        <span class="p2-name-screen-label">Player Two:</span>
+        <span class="p2-name-actual-name"></span>
+      </div>
+    </div>
+
+    <div class="board-score-container">
+      <div class="score-p1"></div>
+      <div class="board"></div>
+      <div class="score-p2"></div>
+    </div>
+
+    <div class="play-again-and-message-container">
+      <button class="play-again">Play again</button>
+      <div class="message"></div>
+    </div>
+
+
   </div>
 
-  <div class="create-player-1">
-    <form action="" method="get">
-      <label for="name">Enter your name</label>
-      <input id="name" type="text" name="name" />
-      <fieldset class="marker-selector">
-        <legend>Choose X or Y</legend>
-        <label for="x">X
-          <input type="radio" id="x" name="marker" checked/>
-        </label>
-        <label for="y">Y
-          <input type="radio" id="y" name="marker" />
-        </label>
-      </fieldset>
-      <button class="ok">OK</button>
+  <div class="pre-game-setup">
+    <h1>Tic Tac Toe</h1>
+    <form action="" method="get" class="name-form">
+      <label for="p1-name">Player 1</label>
+      <input id="p1-name" type="text" name="p1-name" placeholder="Enter name" />
+      <label for="p2-name">Player 2</label>
+      <input id="p2-name" type="text" name="p2-name" placeholder="Enter name" />
+      <button class="start-game-btn">Start Game</button>
     </form>
   </div>
-  <script src="scripts.js"></script>
+
+
+  <script src="scripts-redoe.js"></script>
 </body>
 </html>

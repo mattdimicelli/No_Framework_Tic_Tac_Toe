@@ -42,8 +42,8 @@ button {
 .board {
   display: flex;
   flex-wrap: wrap;
-  height: 350px;
-  width: 350px;
+  height: 260px;
+  width: 260px;
   position: relative;
 }
 
@@ -70,7 +70,7 @@ div.board-score-container {
   justify-content: center;
   align-items: center;
   font-size: 5rem;
-  height: 130px;
+  height: 86.66px;
 }
 
 .pre-game-setup {

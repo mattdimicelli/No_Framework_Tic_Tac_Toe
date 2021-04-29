@@ -144,7 +144,7 @@ const displayController = (() => {
 
   const strikeThru = (combination) => {
     boardDiv.innerHTML +=
-      '<canvas class="canvas" width="350" height="350"></canvas>';
+      '<canvas class="canvas" width="260" height="260"></canvas>';
     const canvas = document.querySelector("canvas.canvas");
     const ctx = canvas.getContext("2d");
     ctx.strokeStyle = "white";
@@ -155,36 +155,36 @@ const displayController = (() => {
     // The following switch statement checks for the winning combination of cells(index numbers), and creates a line striking thru it
     switch (combination.join("")) {
       case "036":
-        ctx.moveTo(58.33, 0);
-        ctx.lineTo(58.33, 350);
+        ctx.moveTo(43.37, 0);
+        ctx.lineTo(43.37, 260);
         break;
       case "147":
-        ctx.moveTo(175, 0);
-        ctx.lineTo(175, 350);
+        ctx.moveTo(130, 0);
+        ctx.lineTo(130, 260);
         break;
       case "258":
-        ctx.moveTo(292, 0);
-        ctx.lineTo(292, 350);
+        ctx.moveTo(216.69, 0);
+        ctx.lineTo(216.69, 260);
         break;
       case "012":
-        ctx.moveTo(0, 58.33);
-        ctx.lineTo(350, 58.33);
+        ctx.moveTo(0, 43.37);
+        ctx.lineTo(260, 43.37);
         break;
       case "345":
-        ctx.moveTo(0, 175);
-        ctx.lineTo(350, 175);
+        ctx.moveTo(0, 130);
+        ctx.lineTo(260, 130);
         break;
       case "678":
-        ctx.moveTo(0, 292);
-        ctx.lineTo(350, 292);
+        ctx.moveTo(0, 216.69);
+        ctx.lineTo(260, 216.69);
         break;
       case "048":
         ctx.moveTo(0, 0);
-        ctx.lineTo(350, 350);
+        ctx.lineTo(260, 260);
         break;
       case "642":
-        ctx.moveTo(0, 350);
-        ctx.lineTo(350, 0);
+        ctx.moveTo(0, 260);
+        ctx.lineTo(260, 0);
         break;
     }
     ctx.stroke();

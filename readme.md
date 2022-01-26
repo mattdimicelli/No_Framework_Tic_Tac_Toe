@@ -10,7 +10,7 @@ Tic Tac Toe like back when you played it on your driveway!  For two players.
 The app was required to basically have as little global code as possible, 
 which would be accomplished by "tucking everything away inside of a module or 
 a factory".  The gameboard logic was to be built separate from the DOM interactions
-themselves.  The full requirements from the Odin Project curriculum [here](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/tic-tac-toe).  
+themselves.  The full requirements from the Odin Project curriculum can be seen [here](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/tic-tac-toe).  
 
 ### Screenshot
 

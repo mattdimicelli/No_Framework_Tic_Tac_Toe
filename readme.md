@@ -20,8 +20,8 @@ themselves.  The full requirements from the Odin Project curriculum can be seen 
 
 ### Links
 
-- [Live site](https://mattdimicelli.github.io/tic-tac-toe/)
-- [Repo](https://github.com/mattdimicelli/tic-tac-toe)
+- [Live site](https://mattdimicelli.github.io/No_Framework_Tic_Tac_Toe/)
+- [Repo](https://github.com/mattdimicelli/No_Framework_Tic_Tac_Toe/)
 
 ## My process
 
